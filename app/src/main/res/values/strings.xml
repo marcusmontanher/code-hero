@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Code Hero</string>
+    <string name="page_list_hero_1">Busca</string>
+    <string name="page_list_hero_2">Marvel</string>
+    <string name="page_list_hero_3">Teste front-end</string>
+    <string name="lbl_busca">Nome do Personagem</string>
+    <string name="hint_busca">Digite o nome do personagem</string>
+    <string name="lbl_nome">Nome</string>
+    <string name="text_img_superhero">Imagem do super herói</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="nao_disponivel">Descrição não disponível</string>
+</resources>

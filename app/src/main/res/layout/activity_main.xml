@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="personagem1"
+            type="com.example.codehero.model.character.Result" />
+
+        <variable
+            name="personagem2"
+            type="com.example.codehero.model.character.Result" />
+
+        <variable
+            name="personagem3"
+            type="com.example.codehero.model.character.Result" />
+
+        <variable
+            name="personagem4"
+            type="com.example.codehero.model.character.Result" />
+
+        <variable
+            name="busca"
+            type="String" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/sv_main"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/red"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_main"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32px"
+                    android:layout_marginEnd="32px"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nome_pagina_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:maxLines="1"
+                        android:text="@string/page_list_hero_1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_nome_pagina_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3px"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_black"
+                        android:maxLines="1"
+                        android:text="@string/page_list_hero_2"
+                        android:textAllCaps="true"
+                        android:textColor="@color/red"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_nome_pagina_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3px"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_light"
+                        android:maxLines="1"
+                        android:text="@string/page_list_hero_3"
+                        android:textAllCaps="true"
+                        android:textColor="@color/red"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/lbl_busca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32px"
+                    android:layout_marginTop="12px"
+                    android:layout_marginEnd="32px"
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_light"
+                    android:maxLines="1"
+                    android:text="@string/lbl_busca"
+                    android:textColor="@color/red"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/edt_busca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32px"
+                    android:layout_marginEnd="32px"
+                    android:layout_marginBottom="12px"
+                    android:drawableStart="@drawable/ic_search"
+                    android:fontFamily="@font/roboto_light"
+                    android:hint="@string/hint_busca"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:text="@={busca}"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="16px"
+                    tools:ignore="Autofill,LabelFor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/red"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_nome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_light"
+                        android:maxLines="1"
+                        android:paddingStart="110px"
+                        android:paddingTop="12px"
+                        android:paddingBottom="12px"
+                        android:text="@string/lbl_nome"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_character_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1px"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24px"
+                            android:layout_marginTop="18px"
+                            android:layout_marginBottom="18px"
+                            android:clickable="true"
+                            android:elevation="10px"
+                            android:focusableInTouchMode="true"
+                            app:cardCornerRadius="30px">
+
+                            <ProgressBar
+                                android:id="@+id/progress_img_1"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/img_character_1"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:layout_weight="0.2"
+                                android:contentDescription="@string/text_img_superhero"
+                                android:gravity="center"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_baseline_image_48" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/lbl_nome_character_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32px"
+                            android:layout_marginEnd="32px"
+                            android:layout_weight="0.8"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/roboto_light"
+                            android:maxLines="1"
+                            android:text="@={personagem1.name}"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:text="Tony Stark" />
+
+                        <ImageButton
+                            android:id="@+id/ib_detalhes_1"
+                            android:layout_width="60px"
+                            android:layout_height="60px"
+                            android:layout_weight="0.2"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:src="@drawable/ic_next" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_character_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1px"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24px"
+                            android:layout_marginTop="18px"
+                            android:layout_marginBottom="18px"
+                            android:clickable="true"
+                            android:elevation="10px"
+                            android:focusableInTouchMode="true"
+                            app:cardCornerRadius="30px">
+
+                            <ProgressBar
+                                android:id="@+id/progress_img_2"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/img_character_2"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:layout_weight="0.2"
+                                android:contentDescription="@string/text_img_superhero"
+                                android:gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_baseline_image_48" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/lbl_nome_character_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32px"
+                            android:layout_marginEnd="32px"
+                            android:layout_weight="0.8"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/roboto_light"
+                            android:maxLines="1"
+                            android:text="@={personagem2.name}"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:text="Tony Stark" />
+
+                        <ImageButton
+                            android:id="@+id/ib_detalhes_2"
+                            android:layout_width="60px"
+                            android:layout_height="60px"
+                            android:layout_weight="0.2"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:src="@drawable/ic_next" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_character_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1px"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24px"
+                            android:layout_marginTop="18px"
+                            android:layout_marginBottom="18px"
+                            android:clickable="true"
+                            android:elevation="10px"
+                            android:focusableInTouchMode="true"
+                            app:cardCornerRadius="30px">
+
+                            <ProgressBar
+                                android:id="@+id/progress_img_3"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/img_character_3"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:layout_weight="0.2"
+                                android:contentDescription="@string/text_img_superhero"
+                                android:gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_baseline_image_48" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/lbl_nome_character_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32px"
+                            android:layout_marginEnd="32px"
+                            android:layout_weight="0.8"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/roboto_light"
+                            android:maxLines="1"
+                            android:text="@={personagem3.name}"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:text="Tony Stark" />
+
+                        <ImageButton
+                            android:id="@+id/ib_detalhes_3"
+                            android:layout_width="60px"
+                            android:layout_height="60px"
+                            android:layout_weight="0.2"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:src="@drawable/ic_next" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_character_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1px"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="24px"
+                            android:layout_marginTop="18px"
+                            android:layout_marginBottom="18px"
+                            android:clickable="true"
+                            android:elevation="10px"
+                            android:focusableInTouchMode="true"
+                            app:cardCornerRadius="30px">
+
+                            <ProgressBar
+                                android:id="@+id/progress_img_4"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/img_character_4"
+                                android:layout_width="60px"
+                                android:layout_height="60px"
+                                android:layout_weight="0.2"
+                                android:contentDescription="@string/text_img_superhero"
+                                android:gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_baseline_image_48" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/lbl_nome_character_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32px"
+                            android:layout_marginEnd="32px"
+                            android:layout_weight="0.8"
+                            android:clickable="true"
+                            android:ellipsize="end"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/roboto_light"
+                            android:maxLines="1"
+                            android:text="@={personagem4.name}"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            tools:text="Tony Stark" />
+
+                        <ImageButton
+                            android:id="@+id/ib_detalhes_4"
+                            android:layout_width="60px"
+                            android:layout_height="60px"
+                            android:layout_weight="0.2"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless"
+                            android:src="@drawable/ic_next" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_paginacao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1px"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/relativeLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:layout_marginStart="30px"
+                            android:layout_marginTop="18px"
+                            android:layout_marginEnd="30px"
+                            android:layout_marginBottom="24px"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <ImageButton
+                                android:id="@+id/ib_back"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                                android:layout_width="?android:attr/actionBarSize"
+                                android:layout_height="?android:attr/actionBarSize"
+                                android:src="@drawable/ic_back"
+                                tools:ignore="ContentDescription" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_paginacao"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="60px"
+                                android:layout_marginEnd="60px"
+                                android:layout_weight="1" />
+
+                            <ImageButton
+                                android:id="@+id/ib_next"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                                android:layout_width="?android:attr/actionBarSize"
+                                android:layout_height="?android:attr/actionBarSize"
+                                android:src="@drawable/ic_next"
+                                tools:ignore="ContentDescription" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_loading"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:backgroundTint="@color/white"
+                    android:theme="@style/Theme.CodeHero"
+                    android:indeterminate="true"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</layout>
