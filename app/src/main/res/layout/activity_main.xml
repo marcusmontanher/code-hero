@@ -54,8 +54,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32px"
-                    android:layout_marginEnd="32px"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
                     android:clickable="true"
                     android:focusableInTouchMode="true"
                     android:orientation="horizontal">
@@ -79,7 +80,7 @@
                         android:id="@+id/tv_nome_pagina_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="3px"
+                        android:layout_marginStart="3dp"
                         android:clickable="true"
                         android:ellipsize="end"
                         android:focusableInTouchMode="true"
@@ -95,7 +96,7 @@
                         android:id="@+id/tv_nome_pagina_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="3px"
+                        android:layout_marginStart="3dp"
                         android:clickable="true"
                         android:ellipsize="end"
                         android:focusableInTouchMode="true"
@@ -111,9 +112,9 @@
                     android:id="@+id/lbl_busca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32px"
-                    android:layout_marginTop="12px"
-                    android:layout_marginEnd="32px"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="32dp"
                     android:clickable="true"
                     android:ellipsize="end"
                     android:focusableInTouchMode="true"
@@ -127,9 +128,9 @@
                     android:id="@+id/edt_busca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32px"
-                    android:layout_marginEnd="32px"
-                    android:layout_marginBottom="12px"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="12dp"
                     android:drawableStart="@drawable/ic_search"
                     android:fontFamily="@font/roboto_light"
                     android:hint="@string/hint_busca"
@@ -138,7 +139,7 @@
                     android:text="@={busca}"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
-                    android:textSize="16px"
+                    android:textSize="16dp"
                     tools:ignore="Autofill,LabelFor" />
 
                 <LinearLayout
@@ -158,9 +159,9 @@
                         android:focusableInTouchMode="true"
                         android:fontFamily="@font/roboto_light"
                         android:maxLines="1"
-                        android:paddingStart="110px"
-                        android:paddingTop="12px"
-                        android:paddingBottom="12px"
+                        android:paddingStart="110dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp"
                         android:text="@string/lbl_nome"
                         android:textColor="@color/white"
                         android:textSize="18sp"
@@ -170,7 +171,7 @@
                         android:id="@+id/ll_character_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1px"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:clickable="true"
                         android:focusableInTouchMode="true"
@@ -181,28 +182,28 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24px"
-                            android:layout_marginTop="18px"
-                            android:layout_marginBottom="18px"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="18dp"
                             android:clickable="true"
-                            android:elevation="10px"
+                            android:elevation="10dp"
                             android:focusableInTouchMode="true"
-                            app:cardCornerRadius="30px">
+                            app:cardCornerRadius="30dp">
 
                             <ProgressBar
                                 android:id="@+id/progress_img_1"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:visibility="visible" />
 
                             <ImageView
                                 android:id="@+id/img_character_1"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:layout_weight="0.2"
                                 android:contentDescription="@string/text_img_superhero"
                                 android:gravity="center"
-                                android:scaleType="centerInside"
+                                android:scaleType="centerCrop"
                                 android:src="@drawable/ic_baseline_image_48" />
                         </androidx.cardview.widget.CardView>
 
@@ -210,8 +211,8 @@
                             android:id="@+id/lbl_nome_character_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="32px"
-                            android:layout_marginEnd="32px"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
                             android:layout_weight="0.8"
                             android:clickable="true"
                             android:ellipsize="end"
@@ -226,9 +227,11 @@
 
                         <ImageButton
                             android:id="@+id/ib_detalhes_1"
-                            android:layout_width="60px"
-                            android:layout_height="60px"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:scaleType="fitEnd"
                             style="@style/Base.Widget.AppCompat.Button.Borderless"
                             android:src="@drawable/ic_next" />
                     </LinearLayout>
@@ -237,7 +240,7 @@
                         android:id="@+id/ll_character_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1px"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:clickable="true"
                         android:focusableInTouchMode="true"
@@ -248,24 +251,24 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24px"
-                            android:layout_marginTop="18px"
-                            android:layout_marginBottom="18px"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="18dp"
                             android:clickable="true"
-                            android:elevation="10px"
+                            android:elevation="10dp"
                             android:focusableInTouchMode="true"
-                            app:cardCornerRadius="30px">
+                            app:cardCornerRadius="30dp">
 
                             <ProgressBar
                                 android:id="@+id/progress_img_2"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:visibility="visible" />
 
                             <ImageView
                                 android:id="@+id/img_character_2"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:layout_weight="0.2"
                                 android:contentDescription="@string/text_img_superhero"
                                 android:gravity="center"
@@ -277,8 +280,8 @@
                             android:id="@+id/lbl_nome_character_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="32px"
-                            android:layout_marginEnd="32px"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
                             android:layout_weight="0.8"
                             android:clickable="true"
                             android:ellipsize="end"
@@ -293,9 +296,11 @@
 
                         <ImageButton
                             android:id="@+id/ib_detalhes_2"
-                            android:layout_width="60px"
-                            android:layout_height="60px"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:scaleType="fitEnd"
                             style="@style/Base.Widget.AppCompat.Button.Borderless"
                             android:src="@drawable/ic_next" />
                     </LinearLayout>
@@ -304,7 +309,7 @@
                         android:id="@+id/ll_character_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1px"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:clickable="true"
                         android:focusableInTouchMode="true"
@@ -315,24 +320,24 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24px"
-                            android:layout_marginTop="18px"
-                            android:layout_marginBottom="18px"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="18dp"
                             android:clickable="true"
-                            android:elevation="10px"
+                            android:elevation="10dp"
                             android:focusableInTouchMode="true"
-                            app:cardCornerRadius="30px">
+                            app:cardCornerRadius="30dp">
 
                             <ProgressBar
                                 android:id="@+id/progress_img_3"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:visibility="visible" />
 
                             <ImageView
                                 android:id="@+id/img_character_3"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:layout_weight="0.2"
                                 android:contentDescription="@string/text_img_superhero"
                                 android:gravity="center"
@@ -344,8 +349,8 @@
                             android:id="@+id/lbl_nome_character_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="32px"
-                            android:layout_marginEnd="32px"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
                             android:layout_weight="0.8"
                             android:clickable="true"
                             android:ellipsize="end"
@@ -360,9 +365,11 @@
 
                         <ImageButton
                             android:id="@+id/ib_detalhes_3"
-                            android:layout_width="60px"
-                            android:layout_height="60px"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:scaleType="fitEnd"
                             style="@style/Base.Widget.AppCompat.Button.Borderless"
                             android:src="@drawable/ic_next" />
                     </LinearLayout>
@@ -371,7 +378,7 @@
                         android:id="@+id/ll_character_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1px"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:clickable="true"
                         android:focusableInTouchMode="true"
@@ -382,24 +389,24 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="24px"
-                            android:layout_marginTop="18px"
-                            android:layout_marginBottom="18px"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="18dp"
                             android:clickable="true"
-                            android:elevation="10px"
+                            android:elevation="10dp"
                             android:focusableInTouchMode="true"
-                            app:cardCornerRadius="30px">
+                            app:cardCornerRadius="30dp">
 
                             <ProgressBar
                                 android:id="@+id/progress_img_4"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:visibility="visible" />
 
                             <ImageView
                                 android:id="@+id/img_character_4"
-                                android:layout_width="60px"
-                                android:layout_height="60px"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
                                 android:layout_weight="0.2"
                                 android:contentDescription="@string/text_img_superhero"
                                 android:gravity="center"
@@ -411,8 +418,8 @@
                             android:id="@+id/lbl_nome_character_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="32px"
-                            android:layout_marginEnd="32px"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
                             android:layout_weight="0.8"
                             android:clickable="true"
                             android:ellipsize="end"
@@ -427,9 +434,11 @@
 
                         <ImageButton
                             android:id="@+id/ib_detalhes_4"
-                            android:layout_width="60px"
-                            android:layout_height="60px"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
                             android:layout_weight="0.2"
+                            android:layout_gravity="center"
+                            android:scaleType="fitEnd"
                             style="@style/Base.Widget.AppCompat.Button.Borderless"
                             android:src="@drawable/ic_next" />
                     </LinearLayout>
@@ -438,7 +447,7 @@
                         android:id="@+id/ll_paginacao"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="1px"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:clickable="true"
                         android:focusableInTouchMode="true"
@@ -450,10 +459,10 @@
                             android:id="@+id/relativeLayout2"
                             android:layout_width="match_parent"
                             android:layout_height="?android:attr/actionBarSize"
-                            android:layout_marginStart="30px"
-                            android:layout_marginTop="18px"
-                            android:layout_marginEnd="30px"
-                            android:layout_marginBottom="24px"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_marginBottom="24dp"
                             android:background="@color/white"
                             android:gravity="center"
                             android:orientation="horizontal"
@@ -472,8 +481,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:layout_marginStart="60px"
-                                android:layout_marginEnd="60px"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"
                                 android:layout_weight="1" />
 
                             <ImageButton
@@ -498,8 +507,8 @@
                 android:gravity="center">
                 <ProgressBar
                     android:id="@+id/progress"
-                    android:layout_width="60px"
-                    android:layout_height="60px"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:backgroundTint="@color/white"
                     android:theme="@style/Theme.CodeHero"
                     android:indeterminate="true"

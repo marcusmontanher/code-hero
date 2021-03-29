@@ -1,9 +1,9 @@
 # Projeto Code Hero - Android
 
 ## Tecnologias utilizadas
-* Volley api para requisições http
-* Gson api para a realização de parse de Json
-* Glide api para a exibição de imagens
+* Biblioteca Volley para requisições http
+* Biblioteca Gson para a realização de parse de Json
+* Biblioteca Glide para a exibição de imagens
 
 ## Platform Version
 * Android Studio - 4.1.2

@@ -53,7 +53,7 @@
             <LinearLayout
                 android:id="@+id/ll_detalhes"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="16dp">
@@ -62,23 +62,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:elevation="10dp"
-                    android:focusableInTouchMode="true">
+                    android:focusableInTouchMode="true"
+                    android:padding="16dp"
+                    app:cardCornerRadius="10dp">
 
                     <ProgressBar
                         android:id="@+id/progress_img"
                         android:layout_width="match_parent"
-                        android:layout_height="100px"
-                        android:visibility="visible" />
+                        android:layout_height="60dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center"/>
 
                     <ImageView
                         android:id="@+id/img_character"
                         android:layout_width="match_parent"
-                        android:layout_height="500px"
-                        android:layout_weight="0.2"
+                        android:layout_height="400dp"
                         android:contentDescription="@string/text_img_superhero"
                         android:gravity="center"
-                        android:scaleType="centerInside"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ic_baseline_image_48" />
                 </androidx.cardview.widget.CardView>
 

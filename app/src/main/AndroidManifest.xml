@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeHero"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetalhesActivity"></activity>
+        <activity android:name=".DetalhesActivity" android:theme="@style/Theme.CodeHero"></activity>
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">

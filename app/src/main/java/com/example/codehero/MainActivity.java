@@ -93,14 +93,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void configureSelection() {
         Intent i = new Intent(this, DetalhesActivity.class);
-        Gson g = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().setDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").create();
+        int rangePage = page * 4;
 
         binding.ibDetalhes1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(0).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(0).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(0).getThumbnail().path+"."+charactersFiltrados.get(0).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage).getThumbnail().path + "." + charactersFiltrados.get(rangePage).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
         binding.llCharacter1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(0).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(0).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(0).getThumbnail().path+"."+charactersFiltrados.get(0).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage).getThumbnail().path + "." + charactersFiltrados.get(rangePage).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -118,9 +118,9 @@ public class MainActivity extends AppCompatActivity {
         binding.ibDetalhes2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(1).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(1).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(1).getThumbnail().path+"."+charactersFiltrados.get(1).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 1).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 1).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 1).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 1).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -128,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
         binding.llCharacter2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(1).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(1).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(1).getThumbnail().path+"."+charactersFiltrados.get(1).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 1).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 1).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 1).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 1).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -138,9 +138,9 @@ public class MainActivity extends AppCompatActivity {
         binding.ibDetalhes3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(2).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(2).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(2).getThumbnail().path+"."+charactersFiltrados.get(2).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 2).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 2).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 2).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 2).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -148,9 +148,9 @@ public class MainActivity extends AppCompatActivity {
         binding.llCharacter3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(2).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(2).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(2).getThumbnail().path+"."+charactersFiltrados.get(2).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 2).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 2).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 2).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 2).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -158,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
         binding.ibDetalhes4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(3).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(3).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(3).getThumbnail().path+"."+charactersFiltrados.get(3).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 3).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 3).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 3).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 3).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -168,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
         binding.llCharacter4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i.putExtra("personagem_nome", charactersFiltrados.get(3).getName());
-                i.putExtra("personagem_descricao", charactersFiltrados.get(3).getDescription());
-                i.putExtra("personagem_imagem", charactersFiltrados.get(3).getThumbnail().path+"."+charactersFiltrados.get(3).getThumbnail().extension);
+                i.putExtra("personagem_nome", charactersFiltrados.get(rangePage + 3).getName());
+                i.putExtra("personagem_descricao", charactersFiltrados.get(rangePage + 3).getDescription());
+                i.putExtra("personagem_imagem", charactersFiltrados.get(rangePage + 3).getThumbnail().path + "." + charactersFiltrados.get(rangePage + 3).getThumbnail().extension);
                 startActivity(i);
             }
         });
@@ -289,7 +289,7 @@ public class MainActivity extends AppCompatActivity {
             binding.llCharacter1.setVisibility(View.VISIBLE);
             binding.setPersonagem1(charactersFiltrados.get(rangePage));
             String urlImg1 = charactersFiltrados.get(rangePage).thumbnail.path + "." + charactersFiltrados.get(rangePage).thumbnail.extension;
-            Glide.with(this).load(urlImg1).listener(new RequestListener<Drawable>(){
+            Glide.with(this).load(urlImg1).listener(new RequestListener<Drawable>() {
 
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -312,7 +312,7 @@ public class MainActivity extends AppCompatActivity {
             binding.llCharacter2.setVisibility(View.VISIBLE);
             binding.setPersonagem2(charactersFiltrados.get(rangePage + 1));
             String urlImg2 = charactersFiltrados.get(rangePage + 1).thumbnail.path + "." + charactersFiltrados.get(rangePage + 1).thumbnail.extension;
-            Glide.with(this).load(urlImg2).listener(new RequestListener<Drawable>(){
+            Glide.with(this).load(urlImg2).listener(new RequestListener<Drawable>() {
 
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -335,7 +335,7 @@ public class MainActivity extends AppCompatActivity {
             binding.llCharacter3.setVisibility(View.VISIBLE);
             binding.setPersonagem3(charactersFiltrados.get(rangePage + 2));
             String urlImg3 = charactersFiltrados.get(rangePage + 2).thumbnail.path + "." + charactersFiltrados.get(rangePage + 2).thumbnail.extension;
-            Glide.with(this).load(urlImg3).listener(new RequestListener<Drawable>(){
+            Glide.with(this).load(urlImg3).listener(new RequestListener<Drawable>() {
 
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -353,12 +353,12 @@ public class MainActivity extends AppCompatActivity {
             binding.llCharacter3.setVisibility(View.GONE);
         }
 
-        if(charactersFiltrados.size() >= 4) {
+        if (charactersFiltrados.size() >= 4) {
             binding.progressImg4.setVisibility(View.VISIBLE);
             binding.llCharacter4.setVisibility(View.VISIBLE);
             binding.setPersonagem4(charactersFiltrados.get(rangePage + 3));
             String urlImg4 = charactersFiltrados.get(rangePage + 3).thumbnail.path + "." + charactersFiltrados.get(rangePage + 3).thumbnail.extension;
-            Glide.with(this).load(urlImg4).listener(new RequestListener<Drawable>(){
+            Glide.with(this).load(urlImg4).listener(new RequestListener<Drawable>() {
 
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -377,6 +377,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         binding.rvPaginacao.scrollToPosition(page + 1);
+        configureSelection();
 
     }
 
@@ -396,9 +397,9 @@ public class MainActivity extends AppCompatActivity {
         pages.clear();
         int qtdCharacters = charactersFiltrados.size();
 
-        if(qtdCharacters <= 4){
+        if (qtdCharacters <= 4) {
             numPaginas = 1;
-        }else {
+        } else {
             numPaginas = (int) Math.ceil(qtdCharacters / 4);
         }
 
@@ -438,7 +439,9 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<Result> filtrados = new ArrayList<>();
 
             for (int i = 0; i < charactersFiltrados.size(); i++) {
-                if (charactersFiltrados.get(i).name.toLowerCase().replaceAll("[^a-zA-Z0-9]", " ").trim().contains(binding.edtBusca.getText().toString().toLowerCase().replaceAll("[^a-zA-Z0-9]", " ").trim())) {
+                String nome = charactersFiltrados.get(i).name.toLowerCase().replaceAll("[^a-zA-Z0-9]", "").trim();
+                String pesquisado = binding.edtBusca.getText().toString().toLowerCase().replaceAll("[^a-zA-Z0-9]", "").trim();
+                if (nome.contains(pesquisado)) {
                     filtrados.add(charactersFiltrados.get(i));
                 }
             }
@@ -453,7 +456,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hideKeyboard(View view) {
-        InputMethodManager inputMethodManager =(InputMethodManager)getSystemService(Activity.INPUT_METHOD_SERVICE);
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 }
